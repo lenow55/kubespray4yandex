@@ -37,7 +37,15 @@
 #     - host: https://registry-1.docker.io
 #       capabilities: ["pull", "resolve"]
 #       skip_verify: false
-
+containerd_registries_mirrors:
+  - prefix: docker.io
+    mirrors:
+      - host: https://mirror.gcr.io
+        capabilities: ["pull", "resolve"]
+        skip_verify: false
+      - host: https://registry-1.docker.io
+        capabilities: ["pull", "resolve"]
+        skip_verify: false
 # containerd_max_container_log_line_size: -1
 
 # containerd_registry_auth:

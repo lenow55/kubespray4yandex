@@ -97,7 +97,7 @@ oom_score = {{ containerd_oom_score }}
 {% endif %}
 
 {% if containerd_tracing_enabled %}
-  [plugins."io.containerd.tracing.processor.v1.otlp"]
+  [plugins."io.containerd.tracing.detector.v1.otlp"]
     endpoint = "{{ containerd_tracing_endpoint }}"
     protocol = "{{ containerd_tracing_protocol }}"
     {% if containerd_tracing_protocol == "grpc" %}
